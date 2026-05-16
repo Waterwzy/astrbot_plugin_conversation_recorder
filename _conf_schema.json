@@ -1,0 +1,6 @@
+{
+    "record_ids" : {
+        "description" : "记录用户的id",
+        "type" : "list"
+    }
+}

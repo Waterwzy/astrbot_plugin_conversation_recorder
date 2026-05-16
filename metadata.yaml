@@ -1,0 +1,6 @@
+name: astrbot_plugin_conversation_recorder 
+display_name: 用户消息记录器
+desc: 用于记录特定用户的会话，以便蒸馏对应用户
+version: v1.0.0
+author: Waterwzy
+repo: https://github.com/Waterwzy/astrbot_plugin_conversation_recorder
