@@ -78,6 +78,10 @@ class ConversationRecorder(Star):
         """异步的插件初始化方法，当实例化该插件类之后会自动调用该方法。"""
         async with self._cr_lock:
             self.record_list = self.get_list()
+            for user, r_list in list(self.record_list.items()):
+                if user not in self.config["record_ids"]:
+                    self.record_list.pop(user)
+                self.write_record(self.record_list)
 
     @filter.event_message_type(filter.EventMessageType.ALL)
     async def record_msg(self, event: AstrMessageEvent):
